@@ -1,8 +1,8 @@
 package leetcode.easy;
 
 import core.BaseTest;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
 import java.security.InvalidParameterException;
 
@@ -14,7 +14,7 @@ public class RomanToIntegerTest extends BaseTest {
         romanToInteger = new RomanToInteger();
 
         String roman = "III";
-        Assertions.assertEquals(romanToInteger.romanToInt(roman), 3);
+        Assert.assertEquals(romanToInteger.romanToInt(roman), 3);
     }
 
     @Test
@@ -22,7 +22,7 @@ public class RomanToIntegerTest extends BaseTest {
         romanToInteger = new RomanToInteger();
 
         String roman = "MCMXCIV";
-        Assertions.assertEquals(romanToInteger.romanToInt(roman), 1994);
+        Assert.assertEquals(romanToInteger.romanToInt(roman), 1994);
     }
 
     @Test
@@ -33,7 +33,7 @@ public class RomanToIntegerTest extends BaseTest {
         try {
             romanToInteger.romanToInt(roman);
         } catch (InvalidParameterException e) {
-            Assertions.assertEquals("Cannot find numeric value for: '7'", e.getMessage());
+            Assert.assertEquals("Cannot find numeric value for: '7'", e.getMessage());
         }
     }
 
@@ -45,7 +45,7 @@ public class RomanToIntegerTest extends BaseTest {
         try {
             romanToInteger.romanToInt(roman);
         } catch (InvalidParameterException e) {
-            Assertions.assertEquals("Cannot find numeric value for: 'v'", e.getMessage());
+            Assert.assertEquals("Cannot find numeric value for: 'v'", e.getMessage());
         }
     }
 
@@ -54,6 +54,6 @@ public class RomanToIntegerTest extends BaseTest {
         romanToInteger = new RomanToInteger();
 
         String roman = "MMMCMXCIX";
-        Assertions.assertEquals(romanToInteger.romanToInt(roman), 3999);
+        Assert.assertEquals(romanToInteger.romanToInt(roman), 3999);
     }
 }

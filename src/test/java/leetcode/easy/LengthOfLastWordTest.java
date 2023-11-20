@@ -1,8 +1,8 @@
 package leetcode.easy;
 
 import core.BaseTest;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
 public class LengthOfLastWordTest extends BaseTest {
     private LengthOfLastWord lengthOfLastWord;
@@ -12,7 +12,7 @@ public class LengthOfLastWordTest extends BaseTest {
         lengthOfLastWord = new LengthOfLastWord();
 
         String sentence = "luffy is still joyboy";
-        Assertions.assertEquals(6, lengthOfLastWord.lengthOfLastWord(sentence));
+        Assert.assertEquals(6, lengthOfLastWord.lengthOfLastWord(sentence));
     }
 
     @Test
@@ -20,6 +20,6 @@ public class LengthOfLastWordTest extends BaseTest {
         lengthOfLastWord = new LengthOfLastWord();
 
         String sentence = "   fly me   to   the moon  ";
-        Assertions.assertEquals(4, lengthOfLastWord.lengthOfLastWord(sentence));
+        Assert.assertEquals(4, lengthOfLastWord.lengthOfLastWord(sentence));
     }
 }

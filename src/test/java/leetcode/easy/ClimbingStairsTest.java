@@ -1,8 +1,8 @@
 package leetcode.easy;
 
 import core.BaseTest;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
 import java.security.InvalidParameterException;
 
@@ -14,7 +14,7 @@ public class ClimbingStairsTest extends BaseTest {
         climbingStairsSolver = new ClimbingStairs();
 
         int stairs = 1;
-        Assertions.assertEquals(1, climbingStairsSolver.climbStairs(stairs));
+        Assert.assertEquals(1, climbingStairsSolver.climbStairs(stairs));
     }
 
     @Test
@@ -22,7 +22,7 @@ public class ClimbingStairsTest extends BaseTest {
         climbingStairsSolver = new ClimbingStairs();
 
         int stairs = 3;
-        Assertions.assertEquals(3, climbingStairsSolver.climbStairs(stairs));
+        Assert.assertEquals(3, climbingStairsSolver.climbStairs(stairs));
     }
 
     @Test
@@ -30,7 +30,7 @@ public class ClimbingStairsTest extends BaseTest {
         climbingStairsSolver = new ClimbingStairs();
 
         int stairs = 10;
-        Assertions.assertEquals(89, climbingStairsSolver.climbStairs(stairs));
+        Assert.assertEquals(89, climbingStairsSolver.climbStairs(stairs));
     }
 
     @Test
@@ -41,7 +41,7 @@ public class ClimbingStairsTest extends BaseTest {
         try {
             climbingStairsSolver.climbStairs(stairs);
         } catch (InvalidParameterException e) {
-            Assertions.assertEquals("Number of stairs must be >= 1.", e.getMessage());
+            Assert.assertEquals("Number of stairs must be >= 1.", e.getMessage());
         }
     }
 }

@@ -1,8 +1,8 @@
 package leetcode.easy;
 
 import core.BaseTest;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
 public class LongestCommonPrefixTest extends BaseTest {
     private LongestCommonPrefix longestCommonPrefix;
@@ -12,7 +12,7 @@ public class LongestCommonPrefixTest extends BaseTest {
         longestCommonPrefix = new LongestCommonPrefix();
 
         String[] arr = {"flower", "flow", "flight"};
-        Assertions.assertEquals("fl", longestCommonPrefix.getLongestCommonPrefix(arr));
+        Assert.assertEquals("fl", longestCommonPrefix.getLongestCommonPrefix(arr));
     }
 
     @Test
@@ -20,7 +20,7 @@ public class LongestCommonPrefixTest extends BaseTest {
         longestCommonPrefix = new LongestCommonPrefix();
 
         String[] arr = {"flower", "air", "millennium"};
-        Assertions.assertEquals("", longestCommonPrefix.getLongestCommonPrefix(arr));
+        Assert.assertEquals("", longestCommonPrefix.getLongestCommonPrefix(arr));
     }
 
     @Test
@@ -28,7 +28,7 @@ public class LongestCommonPrefixTest extends BaseTest {
         longestCommonPrefix = new LongestCommonPrefix();
 
         String[] arr = {"flower", "", "millennium"};
-        Assertions.assertEquals("", longestCommonPrefix.getLongestCommonPrefix(arr));
+        Assert.assertEquals("", longestCommonPrefix.getLongestCommonPrefix(arr));
     }
 
     @Test
@@ -36,7 +36,7 @@ public class LongestCommonPrefixTest extends BaseTest {
         longestCommonPrefix = new LongestCommonPrefix();
 
         String[] arr = new String[0];
-        Assertions.assertEquals("", longestCommonPrefix.getLongestCommonPrefix(arr));
+        Assert.assertEquals("", longestCommonPrefix.getLongestCommonPrefix(arr));
     }
 
     @Test
@@ -44,6 +44,6 @@ public class LongestCommonPrefixTest extends BaseTest {
         longestCommonPrefix = new LongestCommonPrefix();
 
         String[] arr = new String[0];
-        Assertions.assertEquals("", longestCommonPrefix.getLongestCommonPrefix(arr));
+        Assert.assertEquals("", longestCommonPrefix.getLongestCommonPrefix(arr));
     }
 }

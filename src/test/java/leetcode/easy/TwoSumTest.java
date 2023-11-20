@@ -1,8 +1,8 @@
 package leetcode.easy;
 
 import core.BaseTest;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
 public class TwoSumTest extends BaseTest {
     private TwoSum twoSum;
@@ -15,7 +15,7 @@ public class TwoSumTest extends BaseTest {
         int target = 9;
 
         int[] resultIndexes = twoSum.twoSum(arr, target);
-        Assertions.assertEquals(target, arr[resultIndexes[0]] + arr[resultIndexes[1]]);
+        Assert.assertEquals(target, arr[resultIndexes[0]] + arr[resultIndexes[1]]);
     }
 
     @Test
@@ -26,8 +26,8 @@ public class TwoSumTest extends BaseTest {
         int target = 33;
 
         int[] resultIndexes = twoSum.twoSum(arr, target);
-        Assertions.assertEquals(-1, resultIndexes[0]);
-        Assertions.assertEquals(-1, resultIndexes[1]);
+        Assert.assertEquals(-1, resultIndexes[0]);
+        Assert.assertEquals(-1, resultIndexes[1]);
     }
 
     @Test
@@ -38,8 +38,8 @@ public class TwoSumTest extends BaseTest {
         int target = 9;
 
         int[] resultIndexes = twoSum.twoSum(arr, target);
-        Assertions.assertEquals(0, resultIndexes[0]);
-        Assertions.assertEquals(1, resultIndexes[1]);
+        Assert.assertEquals(0, resultIndexes[0]);
+        Assert.assertEquals(1, resultIndexes[1]);
     }
 
     @Test
@@ -50,6 +50,6 @@ public class TwoSumTest extends BaseTest {
         int target = 9;
 
         int[] resultIndexes = twoSum.twoSum(arr, target);
-        Assertions.assertEquals(target, arr[resultIndexes[0]] + arr[resultIndexes[1]]);
+        Assert.assertEquals(target, arr[resultIndexes[0]] + arr[resultIndexes[1]]);
     }
 }

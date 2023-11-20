@@ -1,8 +1,8 @@
 package leetcode.easy;
 
 import core.BaseTest;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
 public class SqrtXTest extends BaseTest {
     private SqrtX sqrtXSolver;
@@ -12,7 +12,7 @@ public class SqrtXTest extends BaseTest {
         sqrtXSolver = new SqrtX();
 
         int number = 4;
-        Assertions.assertEquals(2, sqrtXSolver.mySqrt(number));
+        Assert.assertEquals(2, sqrtXSolver.mySqrt(number));
     }
 
     @Test
@@ -20,7 +20,7 @@ public class SqrtXTest extends BaseTest {
         sqrtXSolver = new SqrtX();
 
         int number = 8;
-        Assertions.assertEquals(2, sqrtXSolver.mySqrt(number));
+        Assert.assertEquals(2, sqrtXSolver.mySqrt(number));
     }
 
     @Test
@@ -28,6 +28,6 @@ public class SqrtXTest extends BaseTest {
         sqrtXSolver = new SqrtX();
 
         int number = 6;
-        Assertions.assertEquals(2, sqrtXSolver.mySqrt(number));
+        Assert.assertEquals(2, sqrtXSolver.mySqrt(number));
     }
 }
