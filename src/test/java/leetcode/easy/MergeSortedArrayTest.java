@@ -1,9 +1,11 @@
 package leetcode.easy;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.security.InvalidParameterException;
+
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MergeSortedArrayTest {
     private MergeSortedArray mergeSortedArraySolver;
@@ -17,7 +19,7 @@ public class MergeSortedArrayTest {
         int n = num2.length;
         int m = num1.length - n;
 
-        Assert.assertArrayEquals(new int[]{1, 2, 2, 3, 5, 6}, mergeSortedArraySolver.merge(num1, m, num2, n));
+        assertArrayEquals(new int[]{1, 2, 2, 3, 5, 6}, mergeSortedArraySolver.merge(num1, m, num2, n));
     }
 
     @Test
@@ -29,7 +31,7 @@ public class MergeSortedArrayTest {
         int n = num2.length;
         int m = num1.length - n;
 
-        Assert.assertArrayEquals(new int[]{0}, mergeSortedArraySolver.merge(num1, m, num2, n));
+        assertArrayEquals(new int[]{0}, mergeSortedArraySolver.merge(num1, m, num2, n));
     }
 
     @Test
@@ -44,7 +46,7 @@ public class MergeSortedArrayTest {
         try {
             mergeSortedArraySolver.merge(num1, m, num2, n);
         } catch (InvalidParameterException e) {
-            Assert.assertEquals(e.getMessage(), "Target array cannot be smaller than the secondary one.");
+            assertEquals(e.getMessage(), "Target array cannot be smaller than the secondary one.");
         }
     }
 
@@ -60,7 +62,7 @@ public class MergeSortedArrayTest {
         try {
             mergeSortedArraySolver.merge(num1, m, num2, n);
         } catch (InvalidParameterException e) {
-            Assert.assertEquals(e.getMessage(), "Target array cannot be smaller than the secondary one.");
+            assertEquals(e.getMessage(), "Target array cannot be smaller than the secondary one.");
         }
     }
 }

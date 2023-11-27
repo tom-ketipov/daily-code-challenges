@@ -1,10 +1,10 @@
 package leetcode.easy;
 
 import core.BaseTest;
-import org.junit.Assert;
-import org.junit.Test;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ValidParenthesesTest extends BaseTest {
     private ValidParentheses validParentheses;
@@ -14,7 +14,7 @@ public class ValidParenthesesTest extends BaseTest {
         validParentheses = new ValidParentheses();
 
         String brackets = "{[()]}{}[()]";
-        Assert.assertTrue(validParentheses.isValid(brackets));
+        assertTrue(validParentheses.isValid(brackets));
     }
 
     @Test
@@ -22,6 +22,6 @@ public class ValidParenthesesTest extends BaseTest {
         validParentheses = new ValidParentheses();
 
         String brackets = "{([)]}";
-        Assert.assertFalse(validParentheses.isValid(brackets));
+        assertFalse(validParentheses.isValid(brackets));
     }
 }

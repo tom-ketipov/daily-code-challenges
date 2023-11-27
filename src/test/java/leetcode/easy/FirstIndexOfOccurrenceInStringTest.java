@@ -1,8 +1,9 @@
 package leetcode.easy;
 
 import core.BaseTest;
-import org.junit.Assert;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FirstIndexOfOccurrenceInStringTest extends BaseTest {
     private FirstIndexOfOccurrenceInString firstIndexOfOccurrenceInString;
@@ -13,7 +14,7 @@ public class FirstIndexOfOccurrenceInStringTest extends BaseTest {
 
         String haystack = "mississipi";
         String needle = "issipi";
-        Assert.assertEquals(4, firstIndexOfOccurrenceInString.strStr(haystack, needle));
+        assertEquals(4, firstIndexOfOccurrenceInString.strStr(haystack, needle));
     }
 
     @Test
@@ -22,7 +23,7 @@ public class FirstIndexOfOccurrenceInStringTest extends BaseTest {
 
         String haystack = "sadderdsadaze";
         String needle = "sad";
-        Assert.assertEquals(0, firstIndexOfOccurrenceInString.strStr(haystack, needle));
+        assertEquals(0, firstIndexOfOccurrenceInString.strStr(haystack, needle));
     }
 
     @Test
@@ -31,7 +32,7 @@ public class FirstIndexOfOccurrenceInStringTest extends BaseTest {
 
         String haystack = "sasddderdsfadaze";
         String needle = "sad";
-        Assert.assertEquals(-1, firstIndexOfOccurrenceInString.strStr(haystack, needle));
+        assertEquals(-1, firstIndexOfOccurrenceInString.strStr(haystack, needle));
     }
 
     @Test
@@ -40,6 +41,6 @@ public class FirstIndexOfOccurrenceInStringTest extends BaseTest {
 
         String haystack = "Sadderdaze";
         String needle = "sad";
-        Assert.assertEquals(-1, firstIndexOfOccurrenceInString.strStr(haystack, needle));
+        assertEquals(-1, firstIndexOfOccurrenceInString.strStr(haystack, needle));
     }
 }

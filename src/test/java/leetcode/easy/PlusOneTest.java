@@ -1,8 +1,10 @@
 package leetcode.easy;
 
 import core.BaseTest;
-import org.junit.Assert;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class PlusOneTest extends BaseTest {
     private PlusOne plusOneSolver;
@@ -12,7 +14,7 @@ public class PlusOneTest extends BaseTest {
         plusOneSolver = new PlusOne();
 
         int[] arr = {2, 5, 3, 1};
-        Assert.assertArrayEquals(new int[]{2, 5, 3, 2}, plusOneSolver.plusOne(arr));
+        assertArrayEquals(new int[]{2, 5, 3, 2}, plusOneSolver.plusOne(arr));
     }
 
     @Test
@@ -20,7 +22,7 @@ public class PlusOneTest extends BaseTest {
         plusOneSolver = new PlusOne();
 
         int[] arr = {2, 5, 9, 9};
-        Assert.assertArrayEquals(new int[]{2, 6, 0, 0}, plusOneSolver.plusOne(arr));
+        assertArrayEquals(new int[]{2, 6, 0, 0}, plusOneSolver.plusOne(arr));
     }
 
     @Test
@@ -28,6 +30,6 @@ public class PlusOneTest extends BaseTest {
         plusOneSolver = new PlusOne();
 
         int[] arr = {9, 9, 9, 9};
-        Assert.assertArrayEquals(new int[]{1, 0, 0, 0, 0}, plusOneSolver.plusOne(arr));
+        assertArrayEquals(new int[]{1, 0, 0, 0, 0}, plusOneSolver.plusOne(arr));
     }
 }

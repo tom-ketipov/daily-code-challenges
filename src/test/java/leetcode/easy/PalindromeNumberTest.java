@@ -1,8 +1,10 @@
 package leetcode.easy;
 
 import core.BaseTest;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class PalindromeNumberTest extends BaseTest {
     private PalindromeNumber palindromeNumber;
@@ -12,7 +14,7 @@ public class PalindromeNumberTest extends BaseTest {
         palindromeNumber = new PalindromeNumber();
 
         int number = 22333322;
-        Assert.assertTrue(palindromeNumber.isPalindrome(number));
+        assertTrue(palindromeNumber.isPalindrome(number));
     }
 
     @Test
@@ -20,7 +22,8 @@ public class PalindromeNumberTest extends BaseTest {
         palindromeNumber = new PalindromeNumber();
 
         int number = -22333322;
-        Assert.assertFalse(palindromeNumber.isPalindrome(number));
+
+        assertFalse(palindromeNumber.isPalindrome(number));
     }
 
     @Test
@@ -28,7 +31,7 @@ public class PalindromeNumberTest extends BaseTest {
         palindromeNumber = new PalindromeNumber();
 
         int number = 0;
-        Assert.assertTrue(palindromeNumber.isPalindrome(number));
+        assertTrue(palindromeNumber.isPalindrome(number));
     }
 
     @Test
@@ -36,6 +39,6 @@ public class PalindromeNumberTest extends BaseTest {
         palindromeNumber = new PalindromeNumber();
 
         int number = -2;
-        Assert.assertFalse(palindromeNumber.isPalindrome(number));
+        assertFalse(palindromeNumber.isPalindrome(number));
     }
 }

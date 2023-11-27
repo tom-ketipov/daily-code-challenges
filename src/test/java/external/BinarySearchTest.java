@@ -1,10 +1,12 @@
 package external;
 
 import core.BaseTest;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class BinarySearchTest extends BaseTest {
     private BinarySearch binarySearch;
@@ -17,7 +19,7 @@ public class BinarySearchTest extends BaseTest {
         int target = arr[10];
 
         Arrays.sort(arr);
-        Assertions.assertTrue(binarySearch.findElement(target, arr));
+        assertTrue(binarySearch.findElement(target, arr));
     }
 
     @Test
@@ -28,7 +30,7 @@ public class BinarySearchTest extends BaseTest {
         int target = arr[0];
 
         Arrays.sort(arr);
-        Assertions.assertTrue(binarySearch.findElement(target, arr));
+        assertTrue(binarySearch.findElement(target, arr));
     }
 
     @Test
@@ -39,7 +41,7 @@ public class BinarySearchTest extends BaseTest {
         int target = arr[arr.length - 1];
 
         Arrays.sort(arr);
-        Assertions.assertTrue(binarySearch.findElement(target, arr));
+        assertTrue(binarySearch.findElement(target, arr));
     }
 
     @Test
@@ -50,7 +52,7 @@ public class BinarySearchTest extends BaseTest {
         int target = 151;
 
         Arrays.sort(arr);
-        Assertions.assertFalse(binarySearch.findElement(target, arr));
+        assertFalse(binarySearch.findElement(target, arr));
     }
 
     @Test
@@ -61,6 +63,6 @@ public class BinarySearchTest extends BaseTest {
         int target = arr[25];
 
         Arrays.sort(arr);
-        Assertions.assertTrue(binarySearch.findElement(target, arr));
+        assertTrue(binarySearch.findElement(target, arr));
     }
 }

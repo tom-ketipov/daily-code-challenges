@@ -1,8 +1,9 @@
 package leetcode.easy;
 
 import core.BaseTest;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SearchInsertPositionTest extends BaseTest {
     private SearchInsertPosition searchInsertPosition;
@@ -13,7 +14,7 @@ public class SearchInsertPositionTest extends BaseTest {
 
         int[] arr = {1, 3, 5, 6};
         int target = 6;
-        Assert.assertEquals(3, searchInsertPosition.searchInsert(arr, target));
+        assertEquals(3, searchInsertPosition.searchInsert(arr, target));
     }
 
     @Test
@@ -22,7 +23,7 @@ public class SearchInsertPositionTest extends BaseTest {
 
         int[] arr = {1, 3, 5, 6};
         int target = 23;
-        Assert.assertEquals(4, searchInsertPosition.searchInsert(arr, target));
+        assertEquals(4, searchInsertPosition.searchInsert(arr, target));
     }
 
     @Test
@@ -31,7 +32,7 @@ public class SearchInsertPositionTest extends BaseTest {
 
         int[] arr = {1, 3, 5, 6};
         int target = 0;
-        Assert.assertEquals(0, searchInsertPosition.searchInsert(arr, target));
+        assertEquals(0, searchInsertPosition.searchInsert(arr, target));
     }
 
     @Test
@@ -40,6 +41,6 @@ public class SearchInsertPositionTest extends BaseTest {
 
         int[] arr = {1, 3, 5, 6};
         int target = 2;
-        Assert.assertEquals(1, searchInsertPosition.searchInsert(arr, target));
+        assertEquals(1, searchInsertPosition.searchInsert(arr, target));
     }
 }
