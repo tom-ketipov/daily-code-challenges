@@ -1,16 +1,15 @@
 package leetcode.easy;
 
-import java.security.InvalidParameterException;
+import services.ValidationMessages;
+import services.ValidationService;
 
 // https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 public class UltimateStockTiming {
     public int maxProfit(int[] prices) {
-        if (prices == null || prices.length <= 1) {
-            throw new InvalidParameterException("Prices cannot be null or less than 2.");
-        }
+        ValidationService.validateNotNull(prices, ValidationMessages.NOT_NULL_ARRAY_EXCEPTION_MESSAGE);
+        ValidationService.validateArrayLengthInRange(prices, 2, Integer.MAX_VALUE, ValidationMessages.NOT_VALID_ARRAY_LENGTH_EXCEPTION_MESSAGE);
 
-        int sellIndex = -1;
-        int maxProfit = 0;
+        int sellIndex = -1, maxProfit = 0;
         for (int i = 0; i < prices.length; i++) {
             int buyIndexPrice = prices[i];
             for (int j = i + 1; j < prices.length; j++) {

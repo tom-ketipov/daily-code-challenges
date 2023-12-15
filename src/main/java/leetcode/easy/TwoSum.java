@@ -1,14 +1,15 @@
 package leetcode.easy;
 
+import services.ValidationMessages;
+import services.ValidationService;
+
 // https://leetcode.com/problems/two-sum/
 public class TwoSum {
     public int[] twoSum(int[] nums, int target) {
-        if (nums.length <= 1) {
-            throw new IllegalArgumentException("Array length cannot be less than 2");
-        }
+        ValidationService.validateNotNull(nums, ValidationMessages.NOT_NULL_ARRAY_EXCEPTION_MESSAGE);
+        ValidationService.validateArrayLengthInRange(nums, 2, Integer.MAX_VALUE, ValidationMessages.NOT_VALID_ARRAY_LENGTH_EXCEPTION_MESSAGE);
 
         int[] additionIndexes = {-1, -1};
-
         boolean found = false;
         for (int i = 0; i < nums.length; i++) {
             for (int j = 0; j < nums.length; j++) {

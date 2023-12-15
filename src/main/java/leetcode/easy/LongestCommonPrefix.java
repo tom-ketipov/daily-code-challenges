@@ -10,7 +10,6 @@ public class LongestCommonPrefix {
 
         StringBuilder prefix = new StringBuilder();
         int index = 0;
-
         while (strs[0].length() > index) {
             char character = strs[0].charAt(index);
 

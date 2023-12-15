@@ -1,6 +1,7 @@
 package leetcode.easy;
 
 import core.BaseTest;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.security.InvalidParameterException;
@@ -10,27 +11,25 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class RomanToIntegerTest extends BaseTest {
     private RomanToInteger romanToInteger;
 
+    @BeforeEach
+    public void setUp() {
+        romanToInteger = new RomanToInteger();
+    }
+
     @Test
     public void can_convert_valid_roman_to_numeric_value() {
-        romanToInteger = new RomanToInteger();
-
         String roman = "III";
-
         assertEquals(romanToInteger.romanToInt(roman), 3);
     }
 
     @Test
     public void can_convert_roman_to_numeric_value_for_subtraction_cases() {
-        romanToInteger = new RomanToInteger();
-
         String roman = "MCMXCIV";
         assertEquals(romanToInteger.romanToInt(roman), 1994);
     }
 
     @Test
     public void cant_convert_invalid_roman_to_numeric_value() {
-        romanToInteger = new RomanToInteger();
-
         String roman = "7h!s!s73s7";
         try {
             romanToInteger.romanToInt(roman);
@@ -41,8 +40,6 @@ public class RomanToIntegerTest extends BaseTest {
 
     @Test
     public void cant_convert_valid_lowercase_roman_to_numeric_value() {
-        romanToInteger = new RomanToInteger();
-
         String roman = "vii";
         try {
             romanToInteger.romanToInt(roman);
@@ -53,8 +50,6 @@ public class RomanToIntegerTest extends BaseTest {
 
     @Test
     public void can_convert_the_highest_roman_to_numeric_value() {
-        romanToInteger = new RomanToInteger();
-
         String roman = "MMMCMXCIX";
         assertEquals(romanToInteger.romanToInt(roman), 3999);
     }
