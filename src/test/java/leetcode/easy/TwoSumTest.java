@@ -1,6 +1,7 @@
 package leetcode.easy;
 
 import core.BaseTest;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -8,10 +9,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TwoSumTest extends BaseTest {
     private TwoSum twoSum;
 
+    @BeforeEach
+    public void setUp() {
+        twoSum = new TwoSum();
+    }
+
     @Test
     public void can_get_addition_indexes_for_valid_arr() {
-        twoSum = new TwoSum();
-
         int[] arr = {2, 7, 11, 15};
         int target = 9;
 
@@ -21,8 +25,6 @@ public class TwoSumTest extends BaseTest {
 
     @Test
     public void cant_get_addition_indexes_for_invalid_arr() {
-        twoSum = new TwoSum();
-
         int[] arr = {2, 7, 11, 15};
         int target = 33;
 
@@ -33,8 +35,6 @@ public class TwoSumTest extends BaseTest {
 
     @Test
     public void first_valid_pair_is_returned_for_valid_arr_with_multiple_valid_combinations() {
-        twoSum = new TwoSum();
-
         int[] arr = {2, 7, 11, 2, 7, 15};
         int target = 9;
 
@@ -45,8 +45,6 @@ public class TwoSumTest extends BaseTest {
 
     @Test
     public void can_get_addition_indexes_for_big_valid_arr() {
-        twoSum = new TwoSum();
-
         int[] arr = generateRandomIntegerArray(100000, 0, 20);
         int target = 9;
 

@@ -1,6 +1,8 @@
 package external;
 
 import core.BaseTest;
+import leetcode.easy.RomanToInteger;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -11,10 +13,13 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class BinarySearchTest extends BaseTest {
     private BinarySearch binarySearch;
 
+    @BeforeEach
+    public void setUp() {
+        binarySearch = new BinarySearch();
+    }
+
     @Test
     public void can_find_existing_element() {
-        binarySearch = new BinarySearch();
-
         int[] arr = generateRandomIntegerArray(100, 0, 150);
         int target = arr[10];
 
@@ -24,8 +29,6 @@ public class BinarySearchTest extends BaseTest {
 
     @Test
     public void can_find_first_element() {
-        binarySearch = new BinarySearch();
-
         int[] arr = generateRandomIntegerArray(100, 0, 51);
         int target = arr[0];
 
@@ -35,8 +38,6 @@ public class BinarySearchTest extends BaseTest {
 
     @Test
     public void can_find_last_element() {
-        binarySearch = new BinarySearch();
-
         int[] arr = generateRandomIntegerArray(100, 0, 33);
         int target = arr[arr.length - 1];
 
@@ -46,8 +47,6 @@ public class BinarySearchTest extends BaseTest {
 
     @Test
     public void cant_find_non_existing_elements() {
-        binarySearch = new BinarySearch();
-
         int[] arr = generateRandomIntegerArray(100, 0, 150);
         int target = 151;
 
@@ -57,8 +56,6 @@ public class BinarySearchTest extends BaseTest {
 
     @Test
     public void can_find_negative_elements() {
-        binarySearch = new BinarySearch();
-
         int[] arr = generateRandomIntegerArray(100, -120, -1);
         int target = arr[25];
 
