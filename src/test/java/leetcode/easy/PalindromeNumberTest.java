@@ -22,7 +22,6 @@ public class PalindromeNumberTest extends BaseTest {
         palindromeNumber = new PalindromeNumber();
 
         int number = -22333322;
-
         assertFalse(palindromeNumber.isPalindrome(number));
     }
 

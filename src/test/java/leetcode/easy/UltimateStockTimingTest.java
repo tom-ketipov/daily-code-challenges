@@ -2,8 +2,7 @@ package leetcode.easy;
 
 import core.BaseTest;
 import org.junit.jupiter.api.Test;
-
-import java.security.InvalidParameterException;
+import services.ValidationMessages;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -32,8 +31,8 @@ public class UltimateStockTimingTest extends BaseTest {
 
         try {
             ultimateStockTimingSolver.maxProfit(null);
-        } catch (InvalidParameterException e) {
-            assertEquals(e.getMessage(), "Prices cannot be null or less than 2.");
+        } catch (IllegalArgumentException e) {
+            assertEquals(ValidationMessages.NOT_NULL_ARRAY_EXCEPTION_MESSAGE, e.getMessage());
         }
     }
 
@@ -43,8 +42,8 @@ public class UltimateStockTimingTest extends BaseTest {
 
         try {
             ultimateStockTimingSolver.maxProfit(new int[]{});
-        } catch (InvalidParameterException e) {
-            assertEquals(e.getMessage(), "Prices cannot be null or less than 2.");
+        } catch (IllegalArgumentException e) {
+            assertEquals(ValidationMessages.NOT_VALID_ARRAY_LENGTH_EXCEPTION_MESSAGE, e.getMessage());
         }
     }
 }

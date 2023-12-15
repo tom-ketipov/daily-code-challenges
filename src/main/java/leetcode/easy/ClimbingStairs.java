@@ -1,13 +1,13 @@
 package leetcode.easy;
 
-import java.security.InvalidParameterException;
+import services.ValidationMessages;
+import services.ValidationService;
 
 // https://leetcode.com/problems/climbing-stairs/
 public class ClimbingStairs {
     public int climbStairs(int n) {
-        if (n <= 0) {
-            throw new InvalidParameterException("Number of stairs must be >= 1.");
-        }
+        ValidationService.validateInRange(n, 1, Integer.MAX_VALUE, ValidationMessages.NOT_POSITIVE_NUMBER_EXCEPTION_MESSAGE);
+
         int a = 0, b = 1, sum = a + b;
         while (n-- >= 2) {
             a = b;

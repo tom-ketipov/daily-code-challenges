@@ -3,8 +3,7 @@ package leetcode.easy;
 import core.BaseTest;
 
 import org.junit.jupiter.api.Test;
-
-import java.security.InvalidParameterException;
+import services.ValidationMessages;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -43,8 +42,8 @@ public class ClimbingStairsTest extends BaseTest {
         int stairs = -10;
         try {
             climbingStairsSolver.climbStairs(stairs);
-        } catch (InvalidParameterException e) {
-            assertEquals("Number of stairs must be >= 1.", e.getMessage());
+        } catch (IllegalArgumentException e) {
+            assertEquals(ValidationMessages.NOT_POSITIVE_NUMBER_EXCEPTION_MESSAGE, e.getMessage());
         }
     }
 }

@@ -1,6 +1,7 @@
 package leetcode.easy;
 
 import org.junit.jupiter.api.Test;
+import services.ValidationMessages;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -46,7 +47,7 @@ class ValidPalindromeTest {
         try {
             assertTrue(validPalindromeSolver.isPalindrome(null));
         } catch (IllegalArgumentException e) {
-            assertEquals("Input cannot be null.", e.getMessage());
+            assertEquals(ValidationMessages.NOT_NULL_STRING_EXCEPTION_MESSAGE, e.getMessage());
         }
     }
 }

@@ -92,4 +92,11 @@ public class ValidationService {
             throw new IllegalArgumentException(message);
         }
     }
+
+    public static void validateArrayLengthInRange(int[] array, int min, int max, String message) {
+        int length = array.length;
+        if (length < min || length > max) {
+            throw new IllegalArgumentException(message);
+        }
+    }
 }

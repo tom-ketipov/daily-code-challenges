@@ -1,8 +1,7 @@
 package leetcode.easy;
 
 import org.junit.jupiter.api.Test;
-
-import java.security.InvalidParameterException;
+import services.ValidationMessages;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -45,8 +44,8 @@ public class MergeSortedArrayTest {
 
         try {
             mergeSortedArraySolver.merge(num1, m, num2, n);
-        } catch (InvalidParameterException e) {
-            assertEquals(e.getMessage(), "Target array cannot be smaller than the secondary one.");
+        } catch (IllegalArgumentException e) {
+            assertEquals(ValidationMessages.NOT_IN_RANGE_EXCEPTION_MESSAGE, e.getMessage());
         }
     }
 
@@ -61,8 +60,8 @@ public class MergeSortedArrayTest {
 
         try {
             mergeSortedArraySolver.merge(num1, m, num2, n);
-        } catch (InvalidParameterException e) {
-            assertEquals(e.getMessage(), "Target array cannot be smaller than the secondary one.");
+        } catch (IllegalArgumentException e) {
+            assertEquals(ValidationMessages.NOT_IN_RANGE_EXCEPTION_MESSAGE, e.getMessage());
         }
     }
 }
