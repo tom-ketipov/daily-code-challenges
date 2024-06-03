@@ -28,9 +28,6 @@ jobs:
       with:
         java-version: '19'
         distribution: 'temurin'
-        
-    - name: Resolve Maven Dependencies
-      run: mvn dependency:resolve --file pom.xml
-      
+
     - name: Run Unit Tests
       run: mvn clean test --file pom.xml
