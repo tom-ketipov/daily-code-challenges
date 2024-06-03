@@ -26,5 +26,5 @@ jobs:
       with:
         java-version: '19'
         distribution: 'temurin'
-    - name: Start JUnit test execution
-      run: mvn -B package --file pom.xml
+    - name: Run unit tests
+      run: mvn clean test --file pom.xml
