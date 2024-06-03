@@ -33,4 +33,4 @@ jobs:
       run: mvn dependency:resolve --file pom.xml
       
     - name: Run Unit Tests
-      run: mvn -q test --file pom.xml
+      run: mvn clean test --file pom.xml
