@@ -12,7 +12,8 @@
         <maven.compiler.source>19</maven.compiler.source>
         <maven.compiler.target>19</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven-surefire.version>3.2.2</maven-surefire.version>
+        <maven-surefire.version>3.2.5</maven-surefire.version>
+        <junit.version>5.10.2</junit.version>
 
     </properties>
 
@@ -21,7 +22,7 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
-            <version>RELEASE</version>
+            <version>${junit.version}</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
