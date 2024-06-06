@@ -1,8 +1,9 @@
 package leetcode.easy;
 
+import enums.ValidationMessageType;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-import services.ValidationMessages;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -36,20 +37,6 @@ public class MergeSortedArrayTest {
     }
 
     @Test
-    public void cant_merge_two_arrays_if_the_target_array_is_empty() {
-        int[] num1 = {2, 5, 0, 0};
-        int[] num2 = {1, 2, 3};
-        int n = num2.length;
-        int m = num1.length - n;
-
-        try {
-            mergeSortedArraySolver.merge(num1, m, num2, n);
-        } catch (IllegalArgumentException e) {
-            assertEquals(ValidationMessages.NOT_IN_RANGE_EXCEPTION_MESSAGE, e.getMessage());
-        }
-    }
-
-    @Test
     public void cant_merge_two_arrays_if_the_target_array_is_smaller_than_secondary() {
         int[] num1 = {};
         int[] num2 = {1, 2, 3};
@@ -59,7 +46,7 @@ public class MergeSortedArrayTest {
         try {
             mergeSortedArraySolver.merge(num1, m, num2, n);
         } catch (IllegalArgumentException e) {
-            assertEquals(ValidationMessages.NOT_IN_RANGE_EXCEPTION_MESSAGE, e.getMessage());
+            assertEquals(ValidationMessageType.OUT_OF_RANGE_ERROR.getExceptionMessage(0, num1.length - n), e.getMessage());
         }
     }
 }

@@ -1,13 +1,11 @@
 package leetcode.easy;
 
-import core.BaseTest;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class PlusOneTest extends BaseTest {
+public class PlusOneTest {
     private PlusOne plusOneSolver;
 
     @BeforeEach

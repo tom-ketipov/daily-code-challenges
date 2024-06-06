@@ -1,14 +1,12 @@
 package leetcode.easy;
 
-import core.BaseTest;
-
+import enums.ValidationMessageType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import services.ValidationMessages;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ClimbingStairsTest extends BaseTest {
+public class ClimbingStairsTest {
     private ClimbingStairs climbingStairsSolver;
 
     @BeforeEach
@@ -24,24 +22,18 @@ public class ClimbingStairsTest extends BaseTest {
     }
 
     @Test
-    public void can_find_combination_for_smaller_stairs_size() {
-        int stairs = 3;
-        assertEquals(3, climbingStairsSolver.climbStairs(stairs));
+    public void can_find_combination_for_max_int() {
+        int stairs = Integer.MAX_VALUE;
+        assertEquals(2140540357, climbingStairsSolver.climbStairs(stairs));
     }
 
     @Test
-    public void can_find_combination_for_bigger_stairs_size() {
-        int stairs = 10;
-        assertEquals(89, climbingStairsSolver.climbStairs(stairs));
-    }
-
-    @Test
-    public void throws_exception_for_invalid_parameters() {
+    public void throws_illegal_argument_exception_for_non_positive_input() {
         int stairs = -10;
         try {
             climbingStairsSolver.climbStairs(stairs);
         } catch (IllegalArgumentException e) {
-            assertEquals(ValidationMessages.NOT_POSITIVE_NUMBER_EXCEPTION_MESSAGE, e.getMessage());
+            assertEquals(ValidationMessageType.BELOW_MINIMUM_ERROR.getExceptionMessage(1), e.getMessage());
         }
     }
 }

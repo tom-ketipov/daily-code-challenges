@@ -1,13 +1,15 @@
 package leetcode.easy;
 
-import services.ValidationMessages;
-import services.ValidationService;
+import org.apache.commons.lang3.Validate;
+
+import static enums.ValidationMessageType.NULL_VALUE_ERROR;
 
 // https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/
+
 public class FirstIndexOfOccurrenceInString {
     public int strStr(String haystack, String needle) {
-        ValidationService.validateNotNull(haystack, ValidationMessages.NOT_NULL_ARRAY_EXCEPTION_MESSAGE);
-        ValidationService.validateNotNull(needle, ValidationMessages.NOT_NULL_ARRAY_EXCEPTION_MESSAGE);
+        Validate.notNull(haystack, NULL_VALUE_ERROR.getExceptionMessage());
+        Validate.notNull(needle, NULL_VALUE_ERROR.getExceptionMessage());
 
         int haystackLength = haystack.length();
         int needleLength = needle.length();

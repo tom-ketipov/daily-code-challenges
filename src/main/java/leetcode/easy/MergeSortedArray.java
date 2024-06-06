@@ -1,16 +1,18 @@
 package leetcode.easy;
 
-import services.ValidationMessages;
-import services.ValidationService;
+import org.apache.commons.lang3.Validate;
 
 import java.util.Arrays;
+
+import static enums.ValidationMessageType.NULL_VALUE_ERROR;
+import static enums.ValidationMessageType.OUT_OF_RANGE_ERROR;
 
 // https://leetcode.com/problems/merge-sorted-array/
 public class MergeSortedArray {
     public int[] merge(int[] nums1, int m, int[] nums2, int n) {
-        ValidationService.validateNotNull(nums1, ValidationMessages.NOT_NULL_ARRAY_EXCEPTION_MESSAGE);
-        ValidationService.validateNotNull(nums2, ValidationMessages.NOT_NULL_ARRAY_EXCEPTION_MESSAGE);
-        ValidationService.validateInRange(m, 0, (nums1.length - n), ValidationMessages.NOT_IN_RANGE_EXCEPTION_MESSAGE);
+        Validate.notNull(nums1, NULL_VALUE_ERROR.getExceptionMessage());
+        Validate.notNull(nums2, NULL_VALUE_ERROR.getExceptionMessage());
+        Validate.inclusiveBetween(0, nums1.length - n, m, OUT_OF_RANGE_ERROR.getExceptionMessage(0, nums1.length - n)); // todo -> double-check the validation for 'm'
 
         for (int i = m; i < nums1.length; i++) {
             nums1[i] = nums2[--n];

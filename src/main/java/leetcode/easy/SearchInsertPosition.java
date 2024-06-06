@@ -1,12 +1,13 @@
 package leetcode.easy;
 
-import services.ValidationMessages;
-import services.ValidationService;
+import org.apache.commons.lang3.Validate;
+
+import static enums.ValidationMessageType.NULL_VALUE_ERROR;
 
 // https://leetcode.com/problems/search-insert-position/description/
 public class SearchInsertPosition {
     public int searchInsert(int[] nums, int target) {
-        ValidationService.validateNotNull(nums, ValidationMessages.NOT_NULL_ARRAY_EXCEPTION_MESSAGE);
+        Validate.notNull(nums, NULL_VALUE_ERROR.getExceptionMessage());
 
         int arrLength = nums.length;
         for (int i = 0; i < nums.length; i++) {

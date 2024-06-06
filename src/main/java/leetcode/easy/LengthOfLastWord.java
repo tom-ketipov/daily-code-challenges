@@ -1,12 +1,13 @@
 package leetcode.easy;
 
-import services.ValidationMessages;
-import services.ValidationService;
+import org.apache.commons.lang3.Validate;
+
+import static enums.ValidationMessageType.NULL_VALUE_ERROR;
 
 // https://leetcode.com/problems/length-of-last-word/
 public class LengthOfLastWord {
     public int lengthOfLastWord(String s) {
-        ValidationService.validateNotNull(s, ValidationMessages.NOT_NULL_STRING_EXCEPTION_MESSAGE);
+        Validate.notNull(s, NULL_VALUE_ERROR.getExceptionMessage());
 
         String[] arr = s.split(" ");
         return arr[arr.length - 1].trim().length();

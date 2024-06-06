@@ -1,13 +1,13 @@
 package leetcode.easy;
 
-import services.ValidationMessages;
-import services.ValidationService;
+import org.apache.commons.lang3.Validate;
+
+import static enums.ValidationMessageType.NULL_VALUE_ERROR;
 
 // https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 public class UltimateStockTiming {
     public int maxProfit(int[] prices) {
-        ValidationService.validateNotNull(prices, ValidationMessages.NOT_NULL_ARRAY_EXCEPTION_MESSAGE);
-        ValidationService.validateArrayLengthInRange(prices, 2, Integer.MAX_VALUE, ValidationMessages.NOT_VALID_ARRAY_LENGTH_EXCEPTION_MESSAGE);
+        Validate.notNull(prices, NULL_VALUE_ERROR.getExceptionMessage());
 
         int sellIndex = -1, maxProfit = 0;
         for (int i = 0; i < prices.length; i++) {

@@ -1,13 +1,12 @@
 package leetcode.easy;
 
-import core.BaseTest;
+import enums.ValidationMessageType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import services.ValidationMessages;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class UltimateStockTimingTest extends BaseTest {
+public class UltimateStockTimingTest {
     private UltimateStockTiming ultimateStockTimingSolver;
 
     @BeforeEach
@@ -28,20 +27,11 @@ public class UltimateStockTimingTest extends BaseTest {
     }
 
     @Test
-    public void exception_is_thrown_for_null_inputs() {
+    public void maxProfit_throws_null_pointer_exception_for_null_inputs() {
         try {
             ultimateStockTimingSolver.maxProfit(null);
-        } catch (IllegalArgumentException e) {
-            assertEquals(ValidationMessages.NOT_NULL_ARRAY_EXCEPTION_MESSAGE, e.getMessage());
-        }
-    }
-
-    @Test
-    public void exception_is_thrown_for_empty_array_inputs() {
-        try {
-            ultimateStockTimingSolver.maxProfit(new int[]{});
-        } catch (IllegalArgumentException e) {
-            assertEquals(ValidationMessages.NOT_VALID_ARRAY_LENGTH_EXCEPTION_MESSAGE, e.getMessage());
+        } catch (NullPointerException e) {
+            assertEquals(ValidationMessageType.NULL_VALUE_ERROR.getExceptionMessage(), e.getMessage());
         }
     }
 }

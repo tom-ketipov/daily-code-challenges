@@ -1,7 +1,8 @@
 package leetcode.easy;
 
-import services.ValidationMessages;
-import services.ValidationService;
+import org.apache.commons.lang3.Validate;
+
+import static enums.ValidationMessageType.NULL_VALUE_ERROR;
 
 /*
         Valid Palindrome problem
@@ -11,7 +12,7 @@ import services.ValidationService;
  */
 public class ValidPalindrome {
     public boolean isPalindrome(String s) {
-        ValidationService.validateNotNull(s, ValidationMessages.NOT_NULL_STRING_EXCEPTION_MESSAGE);
+        Validate.notNull(s, NULL_VALUE_ERROR.getExceptionMessage());
 
         s = s.replaceAll("[^a-zA-Z0-9]", "");
         return s.equalsIgnoreCase(new StringBuilder(s).reverse().toString());

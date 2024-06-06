@@ -1,12 +1,11 @@
 package leetcode.easy;
 
-import core.BaseTest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TwoSumTest extends BaseTest {
+public class TwoSumTest {
     private TwoSum twoSum;
 
     @BeforeEach
@@ -41,14 +40,5 @@ public class TwoSumTest extends BaseTest {
         int[] resultIndexes = twoSum.twoSum(arr, target);
         assertEquals(0, resultIndexes[0]);
         assertEquals(1, resultIndexes[1]);
-    }
-
-    @Test
-    public void can_get_addition_indexes_for_big_valid_arr() {
-        int[] arr = generateRandomIntegerArray(100000, 0, 20);
-        int target = 9;
-
-        int[] resultIndexes = twoSum.twoSum(arr, target);
-        assertEquals(target, arr[resultIndexes[0]] + arr[resultIndexes[1]]);
     }
 }

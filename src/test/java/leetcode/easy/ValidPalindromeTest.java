@@ -1,8 +1,8 @@
 package leetcode.easy;
 
+import enums.ValidationMessageType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import services.ValidationMessages;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -39,11 +39,11 @@ class ValidPalindromeTest {
     }
 
     @Test
-    public void throws_exception_for_null_inputs() {
+    public void isPalindrome_throws_null_pointer_exception_for_null_inputs() {
         try {
             assertTrue(validPalindromeSolver.isPalindrome(null));
-        } catch (IllegalArgumentException e) {
-            assertEquals(ValidationMessages.NOT_NULL_STRING_EXCEPTION_MESSAGE, e.getMessage());
+        } catch (NullPointerException e) {
+            assertEquals(ValidationMessageType.NULL_VALUE_ERROR.getExceptionMessage(), e.getMessage());
         }
     }
 }

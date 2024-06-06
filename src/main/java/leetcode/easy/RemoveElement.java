@@ -1,12 +1,13 @@
 package leetcode.easy;
 
-import services.ValidationMessages;
-import services.ValidationService;
+import org.apache.commons.lang3.Validate;
+
+import static enums.ValidationMessageType.NULL_VALUE_ERROR;
 
 //https://leetcode.com/problems/remove-element/
 public class RemoveElement {
     public int removeElement(int[] nums, int val) {
-        ValidationService.validateNotNull(nums, ValidationMessages.NOT_NULL_ARRAY_EXCEPTION_MESSAGE);
+        Validate.notNull(nums, NULL_VALUE_ERROR.getExceptionMessage());
 
         int occurences = 0;
         for (int i = 0; i < nums.length; i++) {

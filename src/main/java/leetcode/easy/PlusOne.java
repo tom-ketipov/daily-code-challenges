@@ -1,13 +1,12 @@
 package leetcode.easy;
 
-import services.ValidationMessages;
-import services.ValidationService;
+import org.apache.commons.lang3.Validate;
+
+import static enums.ValidationMessageType.NULL_VALUE_ERROR;
 
 // https://leetcode.com/problems/plus-one/description/
 public class PlusOne {
     private int getFirstIncreasingIndex(int[] digits) {
-        ValidationService.validateNotNull(digits, ValidationMessages.NOT_NULL_ARRAY_EXCEPTION_MESSAGE);
-
         int index = digits.length - 1;
         for (int i = digits.length - 1; i >= 1; i--) {
             if (digits[i] != 9) break;
@@ -18,7 +17,7 @@ public class PlusOne {
     }
 
     public int[] plusOne(int[] digits) {
-        ValidationService.validateNotNull(digits, ValidationMessages.NOT_NULL_ARRAY_EXCEPTION_MESSAGE);
+        Validate.notNull(digits, NULL_VALUE_ERROR.getExceptionMessage());
 
         int index = getFirstIncreasingIndex(digits);
         for (int i = digits.length - 1; i >= index; i--) {

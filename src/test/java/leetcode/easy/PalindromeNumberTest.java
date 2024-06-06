@@ -1,13 +1,12 @@
 package leetcode.easy;
 
-import core.BaseTest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class PalindromeNumberTest extends BaseTest {
+public class PalindromeNumberTest {
     private PalindromeNumber palindromeNumber;
 
     @BeforeEach

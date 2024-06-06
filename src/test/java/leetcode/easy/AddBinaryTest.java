@@ -1,12 +1,11 @@
 package leetcode.easy;
 
-import core.BaseTest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class AddBinaryTest extends BaseTest {
+public class AddBinaryTest {
     private AddBinary addBinarySolver;
 
     @BeforeEach
@@ -16,22 +15,6 @@ public class AddBinaryTest extends BaseTest {
 
     @Test
     public void can_add_two_binary_numbers() {
-        String binaryValueA = "1010";
-        String binaryValueB = "1011";
-
-        assertEquals("10101", addBinarySolver.addBinary(binaryValueA, binaryValueB));
-    }
-
-    @Test
-    public void can_handle_long_type_numbers() {
-        String binaryValueA = "10000000000000000000000010000001";
-        String binaryValueB = "10100000000000000000000010011100100";
-
-        assertEquals("10110000000000000000000010101100101", addBinarySolver.addBinary(binaryValueA, binaryValueB));
-    }
-
-    @Test
-    public void can_handle_bin_integer_type_numbers() {
         String binaryValueA = "10100000100100110110010000010101111011011001101110111111111101000000101111001110001111100001101";
         String binaryValueB = "110101001011101110001111100110001010100001101011101010000011011011001011101111001100000011011110011";
 

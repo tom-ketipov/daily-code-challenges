@@ -1,16 +1,17 @@
 package leetcode.easy;
 
-import services.ValidationMessages;
-import services.ValidationService;
+import org.apache.commons.lang3.Validate;
 
 import java.security.InvalidParameterException;
 import java.util.HashMap;
 import java.util.Map;
 
+import static enums.ValidationMessageType.NULL_VALUE_ERROR;
+
 // https://leetcode.com/problems/roman-to-integer/
 public class RomanToInteger {
     public int romanToInt(String s) {
-        ValidationService.validateNotNull(s, ValidationMessages.NOT_NULL_STRING_EXCEPTION_MESSAGE);
+        Validate.notNull(s, NULL_VALUE_ERROR.getExceptionMessage());
 
         int result = 0;
         for (int i = 0; i < s.length(); i++) {

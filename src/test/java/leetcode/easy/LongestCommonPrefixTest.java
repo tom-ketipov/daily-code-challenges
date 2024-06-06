@@ -1,12 +1,11 @@
 package leetcode.easy;
 
-import core.BaseTest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class LongestCommonPrefixTest extends BaseTest {
+public class LongestCommonPrefixTest {
     private LongestCommonPrefix longestCommonPrefix;
 
     @BeforeEach
