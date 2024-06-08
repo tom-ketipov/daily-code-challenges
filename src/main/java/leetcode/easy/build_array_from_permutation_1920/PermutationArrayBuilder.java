@@ -3,6 +3,8 @@ package leetcode.easy.build_array_from_permutation_1920;
 import enums.ValidationMessageType;
 import org.apache.commons.lang3.Validate;
 
+// https://leetcode.com/problems/build-array-from-permutation/description/
+
 public class PermutationArrayBuilder {
 
     public int getMaxArrayLength() {
