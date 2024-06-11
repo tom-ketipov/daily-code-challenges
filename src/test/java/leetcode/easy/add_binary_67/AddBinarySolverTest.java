@@ -1,4 +1,4 @@
-package leetcode.easy;
+package leetcode.easy.add_binary_67;
 
 import enums.ValidationMessageType;
 import org.junit.jupiter.api.Assertions;
