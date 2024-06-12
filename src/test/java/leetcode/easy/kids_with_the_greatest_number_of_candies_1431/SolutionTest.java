@@ -26,7 +26,7 @@ class SolutionTest {
         List<Boolean> candiesCache = solution.kidsWithCandies(candies, extraCandies);
 
         Assertions.assertEquals(5, candiesCache.size());
-        Assertions.assertFalse(candiesCache.get(0));
+        Assertions.assertTrue(candiesCache.get(0));
         Assertions.assertTrue(candiesCache.get(1));
         Assertions.assertTrue(candiesCache.get(2));
         Assertions.assertFalse(candiesCache.get(3));
