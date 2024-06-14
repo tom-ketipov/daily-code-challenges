@@ -15,6 +15,7 @@
         <maven-surefire.version>3.2.5</maven-surefire.version>
         <junit.version>5.10.2</junit.version>
         <apache-commons-lang.version>3.14.0</apache-commons-lang.version>
+        <java-faker.version>1.0.2</java-faker.version>
 
     </properties>
 
@@ -33,6 +34,13 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>${apache-commons-lang.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>${java-faker.version}</version>
         </dependency>
 
     </dependencies>
