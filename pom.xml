@@ -62,6 +62,10 @@
                 </dependencies>
 
                 <configuration>
+                    <!--> Parallel test execution on class level <-->
+                    <parallel>classes</parallel>
+                    <threadCount>5</threadCount>
+
                     <reportFormat>plain</reportFormat>
                     <consoleOutputReporter>
                         <disable>true</disable>
