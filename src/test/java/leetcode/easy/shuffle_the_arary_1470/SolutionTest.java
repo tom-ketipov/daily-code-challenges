@@ -56,7 +56,7 @@ class SolutionTest {
         try {
             arrayShuffleSolver.shuffle(nums, splitIndex);
         } catch (IllegalArgumentException e) {
-            Assertions.assertEquals(ValidationMessageType.OUT_OF_RANGE_ARRAY_LENGTH_ERROR.getExceptionMessage(1, Integer.MAX_VALUE), e.getMessage());
+            Assertions.assertEquals(ValidationMessageType.OUT_OF_RANGE_ARRAY_LIST_LENGTH_ERROR.getExceptionMessage(1, Integer.MAX_VALUE), e.getMessage());
         }
     }
 

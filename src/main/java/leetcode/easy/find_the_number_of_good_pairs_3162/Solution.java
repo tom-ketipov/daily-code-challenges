@@ -20,9 +20,9 @@ public class Solution {
         Validate.notNull(nums2, ValidationMessageType.NULL_VALUE_ERROR.getExceptionMessage());
 
         Validate.inclusiveBetween(getMinArrLength(), getMaxArrLength(), nums1.length,
-                ValidationMessageType.OUT_OF_RANGE_ARRAY_LENGTH_ERROR.getExceptionMessage(getMinArrLength(), getMaxArrLength()));
+                ValidationMessageType.OUT_OF_RANGE_ARRAY_LIST_LENGTH_ERROR.getExceptionMessage(getMinArrLength(), getMaxArrLength()));
         Validate.inclusiveBetween(getMinArrLength(), getMaxArrLength(), nums2.length,
-                ValidationMessageType.OUT_OF_RANGE_ARRAY_LENGTH_ERROR.getExceptionMessage(getMinArrLength(), getMaxArrLength()));
+                ValidationMessageType.OUT_OF_RANGE_ARRAY_LIST_LENGTH_ERROR.getExceptionMessage(getMinArrLength(), getMaxArrLength()));
 
         int count = 0;
         for (int i = 0; i < nums1.length; i++) {

@@ -6,8 +6,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class SolutionTest {
     private Solution solution;
 
@@ -45,7 +43,7 @@ class SolutionTest {
         try {
             solution.mostWordsFound(new String[101]);
         } catch (IllegalArgumentException e) {
-            Assertions.assertEquals(ValidationMessageType.OUT_OF_RANGE_ARRAY_LENGTH_ERROR.getExceptionMessage(solution.getMinValue(), solution.getMaxValue()), e.getMessage());
+            Assertions.assertEquals(ValidationMessageType.OUT_OF_RANGE_ARRAY_LIST_LENGTH_ERROR.getExceptionMessage(solution.getMinValue(), solution.getMaxValue()), e.getMessage());
         }
     }
 
@@ -55,7 +53,7 @@ class SolutionTest {
         try {
             solution.mostWordsFound(new String[0]);
         } catch (IllegalArgumentException e) {
-            Assertions.assertEquals(ValidationMessageType.OUT_OF_RANGE_ARRAY_LENGTH_ERROR.getExceptionMessage(solution.getMinValue(), solution.getMaxValue()), e.getMessage());
+            Assertions.assertEquals(ValidationMessageType.OUT_OF_RANGE_ARRAY_LIST_LENGTH_ERROR.getExceptionMessage(solution.getMinValue(), solution.getMaxValue()), e.getMessage());
         }
     }
 

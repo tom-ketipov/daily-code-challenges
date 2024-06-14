@@ -27,7 +27,7 @@ class SolutionTest {
         try {
             permutationArrayBuilder.buildArray(nums);
         } catch (IllegalArgumentException e) {
-            Assertions.assertEquals(ValidationMessageType.OUT_OF_RANGE_ARRAY_LENGTH_ERROR.getExceptionMessage(0, permutationArrayBuilder.getMaxArrayLength()), e.getMessage());
+            Assertions.assertEquals(ValidationMessageType.OUT_OF_RANGE_ARRAY_LIST_LENGTH_ERROR.getExceptionMessage(0, permutationArrayBuilder.getMaxArrayLength()), e.getMessage());
         }
     }
 
