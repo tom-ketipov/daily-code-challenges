@@ -17,7 +17,7 @@ public class Solution {
     public int mostWordsFound(String[] sentences) {
         Validate.notNull(sentences, ValidationMessageType.NULL_VALUE_ERROR.getExceptionMessage());
         Validate.inclusiveBetween(getMinValue(), getMaxValue(), sentences.length,
-                ValidationMessageType.OUT_OF_RANGE_ARRAY_LIST_LENGTH_ERROR.getExceptionMessage(getMinValue(), getMaxValue()));
+                ValidationMessageType.OUT_OF_RANGE_LENGTH_ERROR.getExceptionMessage(getMinValue(), getMaxValue()));
 
         int maxWords = 0;
         for (String currentSentence : sentences) {

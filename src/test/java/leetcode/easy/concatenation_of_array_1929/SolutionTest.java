@@ -35,7 +35,7 @@ class SolutionTest {
         try {
             concatenationOfArraySolver.getConcatenation(new int[]{});
         } catch (IllegalArgumentException e) {
-            Assertions.assertEquals(ValidationMessageType.OUT_OF_RANGE_ARRAY_LIST_LENGTH_ERROR.getExceptionMessage(1, 1000), e.getMessage());
+            Assertions.assertEquals(ValidationMessageType.OUT_OF_RANGE_LENGTH_ERROR.getExceptionMessage(1, 1000), e.getMessage());
         }
     }
 }

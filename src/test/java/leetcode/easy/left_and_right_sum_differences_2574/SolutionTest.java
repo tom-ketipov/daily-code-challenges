@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Test;
 
 import static leetcode.easy.left_and_right_sum_differences_2574.Solution.MAX_ARR_LENGTH;
 import static leetcode.easy.left_and_right_sum_differences_2574.Solution.MIN_ARR_LENGTH;
-import static org.junit.jupiter.api.Assertions.*;
 
 class SolutionTest {
     private Solution solution;
@@ -40,7 +39,7 @@ class SolutionTest {
         try {
             solution.leftRightDifference(new int[0]);
         } catch (IllegalArgumentException e) {
-            Assertions.assertEquals(ValidationMessageType.OUT_OF_RANGE_ARRAY_LIST_LENGTH_ERROR.getExceptionMessage(MIN_ARR_LENGTH, MAX_ARR_LENGTH), e.getMessage());
+            Assertions.assertEquals(ValidationMessageType.OUT_OF_RANGE_LENGTH_ERROR.getExceptionMessage(MIN_ARR_LENGTH, MAX_ARR_LENGTH), e.getMessage());
         }
     }
 
@@ -50,7 +49,7 @@ class SolutionTest {
         try {
             solution.leftRightDifference(new int[1001]);
         } catch (IllegalArgumentException e) {
-            Assertions.assertEquals(ValidationMessageType.OUT_OF_RANGE_ARRAY_LIST_LENGTH_ERROR.getExceptionMessage(MIN_ARR_LENGTH, MAX_ARR_LENGTH), e.getMessage());
+            Assertions.assertEquals(ValidationMessageType.OUT_OF_RANGE_LENGTH_ERROR.getExceptionMessage(MIN_ARR_LENGTH, MAX_ARR_LENGTH), e.getMessage());
         }
     }
 }

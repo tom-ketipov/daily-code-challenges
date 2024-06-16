@@ -2,17 +2,12 @@ package leetcode.easy.sum_of_values_at_indices_with_k_set_bits_2859;
 
 import com.github.javafaker.Faker;
 import enums.ValidationMessageType;
-import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
-import java.util.random.RandomGenerator;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class SolutionTest {
     private Solution solution;
@@ -75,7 +70,7 @@ class SolutionTest {
         try {
             solution.sumIndicesWithKSetBits(nums, k);
         } catch (IllegalArgumentException e) {
-            Assertions.assertEquals(ValidationMessageType.OUT_OF_RANGE_ARRAY_LIST_LENGTH_ERROR.getExceptionMessage(solution.getMinListLength(), solution.getMaxListLength()), e.getMessage());
+            Assertions.assertEquals(ValidationMessageType.OUT_OF_RANGE_LENGTH_ERROR.getExceptionMessage(solution.getMinListLength(), solution.getMaxListLength()), e.getMessage());
         }
     }
 
@@ -87,7 +82,7 @@ class SolutionTest {
         try {
             solution.sumIndicesWithKSetBits(nums, k);
         } catch (IllegalArgumentException e) {
-            Assertions.assertEquals(ValidationMessageType.OUT_OF_RANGE_ARRAY_LIST_LENGTH_ERROR.getExceptionMessage(solution.getMinListLength(), solution.getMaxListLength()), e.getMessage());
+            Assertions.assertEquals(ValidationMessageType.OUT_OF_RANGE_LENGTH_ERROR.getExceptionMessage(solution.getMinListLength(), solution.getMaxListLength()), e.getMessage());
         }
     }
 

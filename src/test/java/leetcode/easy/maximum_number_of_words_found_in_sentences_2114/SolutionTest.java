@@ -43,7 +43,7 @@ class SolutionTest {
         try {
             solution.mostWordsFound(new String[101]);
         } catch (IllegalArgumentException e) {
-            Assertions.assertEquals(ValidationMessageType.OUT_OF_RANGE_ARRAY_LIST_LENGTH_ERROR.getExceptionMessage(solution.getMinValue(), solution.getMaxValue()), e.getMessage());
+            Assertions.assertEquals(ValidationMessageType.OUT_OF_RANGE_LENGTH_ERROR.getExceptionMessage(solution.getMinValue(), solution.getMaxValue()), e.getMessage());
         }
     }
 
@@ -53,7 +53,7 @@ class SolutionTest {
         try {
             solution.mostWordsFound(new String[0]);
         } catch (IllegalArgumentException e) {
-            Assertions.assertEquals(ValidationMessageType.OUT_OF_RANGE_ARRAY_LIST_LENGTH_ERROR.getExceptionMessage(solution.getMinValue(), solution.getMaxValue()), e.getMessage());
+            Assertions.assertEquals(ValidationMessageType.OUT_OF_RANGE_LENGTH_ERROR.getExceptionMessage(solution.getMinValue(), solution.getMaxValue()), e.getMessage());
         }
     }
 

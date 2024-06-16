@@ -27,7 +27,7 @@ public class Solution {
     public int sumIndicesWithKSetBits(List<Integer> nums, int k) {
         Validate.notNull(nums, ValidationMessageType.NULL_VALUE_ERROR.getExceptionMessage());
         Validate.inclusiveBetween(getMinListLength(), getMaxListLength(), nums.size(),
-                ValidationMessageType.OUT_OF_RANGE_ARRAY_LIST_LENGTH_ERROR.getExceptionMessage(getMinListLength(), getMaxListLength()));
+                ValidationMessageType.OUT_OF_RANGE_LENGTH_ERROR.getExceptionMessage(getMinListLength(), getMaxListLength()));
 
         Validate.inclusiveBetween(getMinKSetValue(), getMaxKSetValue(), k,
                 ValidationMessageType.OUT_OF_RANGE_ERROR.getExceptionMessage(getMinKSetValue(), getMaxKSetValue()));

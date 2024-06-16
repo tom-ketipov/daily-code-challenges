@@ -12,7 +12,7 @@ public class Solution {
     public int[] leftRightDifference(int[] nums) {
         Validate.notNull(nums, ValidationMessageType.NULL_VALUE_ERROR.getExceptionMessage());
         Validate.inclusiveBetween(MIN_ARR_LENGTH, MAX_ARR_LENGTH, nums.length,
-                ValidationMessageType.OUT_OF_RANGE_ARRAY_LIST_LENGTH_ERROR.getExceptionMessage(MIN_ARR_LENGTH, MAX_ARR_LENGTH));
+                ValidationMessageType.OUT_OF_RANGE_LENGTH_ERROR.getExceptionMessage(MIN_ARR_LENGTH, MAX_ARR_LENGTH));
 
         int[] result = new int[nums.length];
 

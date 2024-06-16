@@ -54,7 +54,7 @@ class SolutionTest {
         try {
             solution.numberOfPairs(new int[0], nums, k);
         } catch (IllegalArgumentException e) {
-            Assertions.assertEquals(ValidationMessageType.OUT_OF_RANGE_ARRAY_LIST_LENGTH_ERROR.getExceptionMessage(solution.getMinArrLength(), solution.getMaxArrLength()), e.getMessage());
+            Assertions.assertEquals(ValidationMessageType.OUT_OF_RANGE_LENGTH_ERROR.getExceptionMessage(solution.getMinArrLength(), solution.getMaxArrLength()), e.getMessage());
         }
     }
 
@@ -66,7 +66,7 @@ class SolutionTest {
         try {
             solution.numberOfPairs(nums, new int[0], k);
         } catch (IllegalArgumentException e) {
-            Assertions.assertEquals(ValidationMessageType.OUT_OF_RANGE_ARRAY_LIST_LENGTH_ERROR.getExceptionMessage(solution.getMinArrLength(), solution.getMaxArrLength()), e.getMessage());
+            Assertions.assertEquals(ValidationMessageType.OUT_OF_RANGE_LENGTH_ERROR.getExceptionMessage(solution.getMinArrLength(), solution.getMaxArrLength()), e.getMessage());
         }
     }
 
@@ -78,7 +78,7 @@ class SolutionTest {
         try {
             solution.numberOfPairs(new int[51], nums, k);
         } catch (IllegalArgumentException e) {
-            Assertions.assertEquals(ValidationMessageType.OUT_OF_RANGE_ARRAY_LIST_LENGTH_ERROR.getExceptionMessage(solution.getMinArrLength(), solution.getMaxArrLength()), e.getMessage());
+            Assertions.assertEquals(ValidationMessageType.OUT_OF_RANGE_LENGTH_ERROR.getExceptionMessage(solution.getMinArrLength(), solution.getMaxArrLength()), e.getMessage());
         }
     }
 
@@ -90,7 +90,7 @@ class SolutionTest {
         try {
             solution.numberOfPairs(new int[51], nums, k);
         } catch (IllegalArgumentException e) {
-            Assertions.assertEquals(ValidationMessageType.OUT_OF_RANGE_ARRAY_LIST_LENGTH_ERROR.getExceptionMessage(solution.getMinArrLength(), solution.getMaxArrLength()), e.getMessage());
+            Assertions.assertEquals(ValidationMessageType.OUT_OF_RANGE_LENGTH_ERROR.getExceptionMessage(solution.getMinArrLength(), solution.getMaxArrLength()), e.getMessage());
         }
     }
 }

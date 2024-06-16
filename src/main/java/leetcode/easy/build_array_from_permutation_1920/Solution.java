@@ -13,7 +13,7 @@ public class Solution {
 
     public int[] buildArray(int[] nums) {
         Validate.notNull(nums, ValidationMessageType.NULL_VALUE_ERROR.getExceptionMessage());
-        Validate.inclusiveBetween(0, getMaxArrayLength(), nums.length, ValidationMessageType.OUT_OF_RANGE_ARRAY_LIST_LENGTH_ERROR.getExceptionMessage(0, getMaxArrayLength()));
+        Validate.inclusiveBetween(0, getMaxArrayLength(), nums.length, ValidationMessageType.OUT_OF_RANGE_LENGTH_ERROR.getExceptionMessage(0, getMaxArrayLength()));
 
         int[] ans = new int[nums.length];
         int minValue = 0, maxValue = nums.length - 1;
