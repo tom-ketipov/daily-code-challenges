@@ -4,6 +4,7 @@ public enum ValidationMessageType {
     NULL_VALUE_ERROR("The input must not be null"),
     EMPTY_VALUE_ERROR("The input value must not be empty"),
     ILLEGAL_VALUE_ERROR("The input value is illegal"),
+    ILLEGAL_MATCHING_VALUE_ERROR("The input value is illegal. The input must match one of the following values: %s"),
     OUT_OF_RANGE_ERROR("The input value must be between %d and %d"),
     OUT_OF_RANGE_LENGTH_ERROR("The input array/list length must be between %d and %d"),
     BELOW_MINIMUM_ERROR("The value must be bigger than %d (inclusively)"),
