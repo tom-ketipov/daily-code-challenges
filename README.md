@@ -51,7 +51,7 @@ This is a repository, where I share my solutions to various coding challenges fr
 
 
 
-Each solution in the `src/main/java/leetcode` or `src/main/java/codewars` directories has a corresponding test class in the `src/test/java/leetcode` or `src/test/java/codewars` directories to check if that the solution works as expected.
+Each solution in the `src/main/java/leetcode` or `src/main/java/codewars` directories has a corresponding test class in the `src/test/java/leetcode` or `src/test/java/codewars` directories to check if the solution works as expected.
 
 ---
 ## Coding Challenge Progress
