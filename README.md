@@ -1,53 +1,20 @@
-﻿# Daily-Dev-Challenges
+﻿# Daily Code Challenges
 
-Hi 👋! This repository contains my solutions to various coding challenges from LeetCode and Codewars.
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) ![JUnit5 Badge](https://img.shields.io/badge/JUnit5-25A162?logo=junit5&logoColor=fff&style=for-the-badge) ![Apache Maven Badge](https://img.shields.io/badge/Apache%20Maven-C71A36?logo=apachemaven&logoColor=fff&style=for-the-badge)  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/thomas-ketipov-623b82178/)
+[![By - P1N3](https://img.shields.io/badge/By-P1N3-ffffff?style=for-the-badge)](https://github.com/tom-ketipov)
+
+This is a repository, where I share my solutions to various coding challenges from LeetCode and Codewars. Currently, each solution is written in Java and is covered with unit tests using JUnit5.
+
 
 ## Table of Contents
 
-- [*Introduction*](#introduction)
 - [*Repository Structure*](#repository-structure)
+- [*Coding Challenge Progress*](#coding-challenge-progress)
 - [*Getting Started*](#getting-started)
 - [*Running Tests*](#running-tests)
 - [*License*](#license)
 
-## Introduction
 
-*This repository is designed to keep track of my progress on coding challenges that I do in my day-to-day life.
-Currently, each solution is written in Java and is covered with unit tests using the JUnit framework.*
-
-### ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
-
-LeetCode is a popular online platform for coding challenges and technical interviews. It offers a vast collection of
-problems that cover a wide range of topics including algorithms, data structures, databases, and more. LeetCode is
-widely used by software developers to prepare for technical interviews and to improve their problem-solving skills.
-
-Key features of LeetCode include:
-
-- **Practice Problems**: Over 2000 problems ranging from easy to hard.
-- **Contests**: Regularly hosted contests to compete with peers.
-- **Discuss**: A community forum to discuss problems, solutions, and interview experiences.
-- **Interview Preparation**: Curated lists of problems to help prepare for specific company interviews.
-
-*Visit [LeetCode](https://leetcode.com/) to learn more.*
-
-![](https://leetcard.jacoblin.cool/p1ne_?ext=heatmap&theme=dark)
-
-### ![Codewars](https://img.shields.io/badge/Codewars-B1361E?style=for-the-badge&logo=codewars&logoColor=grey)
-
-CodeWars is an online platform that provides coding challenges known as "katas" to help developers improve their coding
-skills through practice and competition. The challenges are designed by the community and cover various programming
-languages and skill levels.
-
-Key features of CodeWars include:
-
-- **Katas**: Challenges of varying difficulty to practice coding skills.
-- **Rank Progression**: A ranking system that rewards users as they complete katas.
-- **Community**: Engage with other developers to solve problems and discuss solutions.
-- **Languages**: Supports multiple programming languages, making it a versatile tool for learning and practicing.
-
-*Visit [CodeWars](https://www.codewars.com/) to learn more.*
-
-[![Github Readme Codewars](https://codewars-stats-ignacio-cuadra.vercel.app/?username=p1ne&theme=dark)](https://github.com/ignacio-cuadra/github-readme-codewars)
 
 ## Repository Structure
 
@@ -55,45 +22,81 @@ Key features of CodeWars include:
 
     . 
     └── src/ 
-		    ├── main/ 
-		    │ 	└── java/ 
-		    │ 		├── codewars/ 
-		    │ 		│ 	├── eight_kyu/ 
-		    │ 		│ 	│ 	└── problem/ 
-		    │ 		│ 	│ 		└── ProblemSolver.java 
-		    │ 		│ 	├── seven_kyu 
-		    │ 		│ 	├── ...
-		    │ 		│ 	└── one_kyu 
-		    │ 		└── leetcode/ 
-		    │ 			├── easy/ 
-		    │ 			│ 	└── problem/ 
-		    │ 			│ 		└── ProblemSolver.java 
-		    │ 			├── medium 
-		    │ 			└── hard 
-		    └── test/ 
-			    └── java/ 
-				    ├── codewars/ 
-				    │ 	├── eight_kyu/ 
-				    │ 	│ 	└── problem/ 
-				    │ 	│ 		└── ProblemSolverTest.java 
-				    │ 	├── ...
-				    └── leetcode/ 
-					    ├── easy/ 
-					    │ 	└── problem/ 
-					    │ 		└── ProblemSolverTest.java 
-					    ├── medium 
-					    └── hard
+        ├── main/ 
+	    │ 	└── java/ 
+	    │ 	    ├── codewars/ 
+	    │ 	    │ 	    ├── eight_kyu/ 
+	    │ 	    │ 	    │ 	└── problem/ 
+	    │ 	    │ 	    │ 		└── Solution.java 
+	    │ 	    │ 	    ├── seven_kyu 
+	    │ 	    │ 	    ├── ...
+	    │ 	    │ 	    └── one_kyu 
+	    │ 	    └── leetcode/ 
+	    │ 	    	    ├── easy/ 
+	    │ 	    	    │ 	└── problem/ 
+	    │ 	    	    │ 		└── Solution.java 
+	    │ 	    	    ├── medium 
+	    │ 	    	    └── hard 
+	    └── test/ 
+            └── java/ 
+                ├── codewars/ 
+                │ 	    ├── eight_kyu/ 
+                │ 	    │ 	└── problem/ 
+                │ 	    │ 		└── SolutionTest.java 
+                │ 	    ├── ...
+                └── leetcode/ 
+                        ├── easy/ 
+                        │ 	└── problem/ 
+                        │ 		└── SolutionTest.java 
+                        ├── medium 
+                        └── hard
 
+
+
+Each solution in the `src/main/java/leetcode` directory has a corresponding test class in the `src/test/java/leetcode` directory to ensure that the solution works as expected.
+
+---
+## Coding Challenge Progress
+
+In this section, you can find a snapshot of my current progress on LeetCode and Codewars.
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+Here’s a snapshot of my current progress on LeetCode:
+
+![](https://leetcard.jacoblin.cool/p1ne_?ext=heatmap&theme=dark)
+
+For more details, visit my LeetCode profile.
+
+---
+### ![Codewars](https://img.shields.io/badge/Codewars-B1361E?style=for-the-badge&logo=codewars&logoColor=grey)
+Here’s a summary of my Codewars progress:
+
+[![Github Readme Codewars](https://codewars-stats-ignacio-cuadra.vercel.app/?username=p1ne&theme=dark)](https://github.com/ignacio-cuadra/github-readme-codewars)
+
+---
 ## Getting Started
 
-To get a local copy up and running, follow these simple steps:
+To get a local copy of this project up and running on your machine, follow the instructions below.
 
 ### Prerequisites
+Before you begin, ensure you have the following software installed on your machine:
 
-* **Java**: Make sure you have Java 19 installed on your machine. You can download Java
-  from [oracle.com](https://www.oracle.com/java/technologies/javase-downloads.html).
-* **Maven**: Ensure you have Maven 3.6 or later installed. You can download Maven
-  from [maven.apache.org](https://maven.apache.org/download.cgi).
+#### 1. Java
+Make sure you have Java 19 or later installed. It is required to compile and run the code in this repository.
+<br>
+
+To check your Java version, run the following command in your terminal:
+
+    java -version
+
+#### 2. Maven
+Ensure you have Maven 3.6 or later installed. Maven is used for managing dependencies and building the project.
+
+To check your Java version, run the following command in your terminal:
+
+    mvn -version
+
 
 ### Installation
 
@@ -105,14 +108,10 @@ To get a local copy up and running, follow these simple steps:
 
        cd daily-code-challenges
 
+---
 ## Running Tests
 
-You can run all tests in the repository using the following command from the root directory:
+To run all the tests for the project, use the following Maven command:
 
 	mvn clean test
-
-## License
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 
