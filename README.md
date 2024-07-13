@@ -12,8 +12,6 @@ This is a repository, where I share my solutions to various coding challenges fr
 - [*Coding Challenge Progress*](#coding-challenge-progress)
 - [*Getting Started*](#getting-started)
 - [*Running Tests*](#running-tests)
-- [*License*](#license)
-
 
 
 ## Repository Structure
